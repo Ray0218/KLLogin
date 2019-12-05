@@ -18,7 +18,6 @@
 
 
 
-ProjectName = "KLLogin"
  
 #git操作
 git stash
@@ -27,6 +26,8 @@ git stash pop
 
 confirmed="n"
 NewVersionNumber=""
+ProjectName="KLLogin"
+
 
 getNewVersion() {
     read -p "请输入新的版本号: " NewVersionNumber
@@ -40,6 +41,7 @@ getNewVersion() {
 #VersionString=`grep -E 's.version.*='  ${ProjectName}.podspec`
 VersionString="grep -E 's.version.*='  ${ProjectName}.podspec"
 
+ 
 VersionNumberDot=`tr -cd "[0-9.]" <<<"$VersionString"`
 VersionNumber=`sed 's/^.//' <<<"$VersionNumberDot"`
 
