@@ -18,7 +18,6 @@
 
 
 
- 
 #git操作
 git stash
 git pull origin master --tags
@@ -28,23 +27,19 @@ confirmed="n"
 NewVersionNumber=""
 ProjectName="KLLogin"
 
-
 getNewVersion() {
-    read -p "请输入新的版本号: " NewVersionNumber
+read -p "请输入新的版本号: " NewVersionNumber
 
-    if test -z "$NewVersionNumber"; then
-        getNewVersion
-    fi
+if test -z "$NewVersionNumber"; then
+getNewVersion
+fi
 }
 
 #获取版本号并显示
-#VersionString=`grep -E 's.version.*='  ${ProjectName}.podspec`
 VersionString=`grep -E 's.version.*='  ${ProjectName}.podspec`
 
- 
 VersionNumberDot=`tr -cd "[0-9.]" <<<"$VersionString"`
 VersionNumber=`sed 's/^.//' <<<"$VersionNumberDot"`
-
 
 echo -e "\n${Default}================================================"
 echo -e " Current Version   :  ${Cyan}${VersionNumber}${Default}"
@@ -67,13 +62,8 @@ fi
 read -p "确定? (y/n):" confirmed
 done
 
-
-#LineNumber=`grep -nE 's.version.*=' __ProjectName__.podspec | cut -d : -f1`
-#sed -i "" "${LineNumber}s/${VersionNumber}/${NewVersionNumber}/g" __ProjectName__.podspec
-
 LineNumber=`grep -nE 's.version.*=' ${ProjectName}.podspec | cut -d : -f1`
 sed -i "" "${LineNumber}s/${VersionNumber}/${NewVersionNumber}/g" ${ProjectName}.podspec
-
 
 echo -e "\n${Default}================================================"
 echo -e "current version is ${VersionNumber}, new version is ${NewVersionNumber}"
@@ -84,4 +74,4 @@ git commit -am ${NewVersionNumber}
 git tag ${NewVersionNumber}
 git push origin master --tags
 
-#pod trunk push ${ProjectName}.podspec --allow-warnings
+pod repo push CustomPrivatePods ${ProjectName}.podspec --allow-warnings --use-libraries --use-modular-headers
