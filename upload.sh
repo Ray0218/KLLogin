@@ -76,10 +76,9 @@ sed -i "" "${LineNumber}s/${VersionNumber}/${NewVersionNumber}/g" ${ProjectName}
 
 
 echo -e "\n${Default}================================================"
-echo -e `current version is ${VersionNumber}, new version is ${NewVersionNumber}`
+echo -e "current version is ${VersionNumber}, new version is ${NewVersionNumber}"
 echo -e "================================================\n"
 
-git push && podspec push
 git add .
 git commit -am ${NewVersionNumber}
 git tag ${NewVersionNumber}
