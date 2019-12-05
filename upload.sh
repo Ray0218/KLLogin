@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VersionString="grep -E 's.version.*=' KLLogin.podspec"
+VersionString="grep -E 'spec.version.*=' KLLogin.podspec"
 VersionNumber=`tr -cd 0-9 <<<"$VersionString"`
 
 NewVersionNumber=$(($VersionNumber + 1))
