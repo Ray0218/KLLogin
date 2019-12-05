@@ -1,29 +1,29 @@
 
-Pod::Spec.new do |spec|
+Pod::s.new do |s|
 
-spec.name         = "KLLogin"
-spec.version ="1"
-spec.summary      = "登录"
+s.name         = "KLLogin"
+s.version ="1"
+s.summary      = "登录"
 
-spec.description  = <<-DESC
+s.description  = <<-DESC
 描述文字
 DESC
 
-spec.homepage     = "https://github.com/Ray0218/KLLogin"
+s.homepage     = "https://github.com/Ray0218/KLLogin"
 
-spec.license      = { :type => "MIT", :file => "LICENSE" }
-spec.author             = { "Ray0218" => "ray_ios@163.com" }
-spec.platform     = :ios, "8.0"
+s.license      = { :type => "MIT", :file => "LICENSE" }
+s.author             = { "Ray0218" => "ray_ios@163.com" }
+s.platform     = :ios, "8.0"
 
-spec.source       = { :git => "https://github.com/Ray0218/KLLogin.git", :tag => "#{spec.version}" }
+s.source       = { :git => "https://github.com/Ray0218/KLLogin.git", :tag => "#{s.version}" }
 
 #只获取项目下Class目录中的文件
-spec.source_files  =   "KLLogin/Class/**/*.{h,m,swift}"
-#spec.exclude_files = "Classes/Exclude"
+s.source_files  =   "KLLogin/Class/**/*.{h,m,swift}"
+#s.exclude_files = "Classes/Exclude"
 
-# spec.public_header_files = "Classes/**/*.h"
-spec.requires_arc = true
+# s.public_header_files = "Classes/**/*.h"
+s.requires_arc = true
 
-spec.dependency  'Masonry'
+s.dependency  'Masonry'
 
 end

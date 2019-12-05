@@ -1,10 +1,10 @@
 #!/bin/bash
 
-VersionString="grep -E 'spec.version.*=' KLLogin.podspec"
+VersionString="grep -E 's.version.*=' KLLogin.podspec"
 VersionNumber=`tr -cd 0-9 <<<"$VersionString"`
  
 NewVersionNumber=$(($VersionNumber + 1))
-LineNumber=`grep -nE 'spec.version.*=' KLLogin.podspec | cut -d : -f1`
+LineNumber=`grep -nE 's.version.*=' KLLogin.podspec | cut -d : -f1`
 sed -i "" "${LineNumber}s/${VersionNumber}/${NewVersionNumber}/g" KLLogin.podspec
 
 echo " ss  ${VersionString}current version is ${VersionNumber}, new version is ${NewVersionNumber}"
