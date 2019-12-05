@@ -39,7 +39,7 @@ getNewVersion() {
 
 #获取版本号并显示
 #VersionString=`grep -E 's.version.*='  ${ProjectName}.podspec`
-VersionString="grep -E 's.version.*='  ${ProjectName}.podspec"
+VersionString=`grep -E 's.version.*='  ${ProjectName}.podspec`
 
  
 VersionNumberDot=`tr -cd "[0-9.]" <<<"$VersionString"`
@@ -71,12 +71,12 @@ done
 #LineNumber=`grep -nE 's.version.*=' __ProjectName__.podspec | cut -d : -f1`
 #sed -i "" "${LineNumber}s/${VersionNumber}/${NewVersionNumber}/g" __ProjectName__.podspec
 
-LineNumber="grep -nE 's.version.*=' ${ProjectName}.podspec | cut -d : -f1"
+LineNumber=`grep -nE 's.version.*=' ${ProjectName}.podspec | cut -d : -f1`
 sed -i "" "${LineNumber}s/${VersionNumber}/${NewVersionNumber}/g" ${ProjectName}.podspec
 
 
 echo -e "\n${Default}================================================"
-echo -e "current version is ${VersionNumber}, new version is ${NewVersionNumber}"
+echo -e `current version is ${VersionNumber}, new version is ${NewVersionNumber}`
 echo -e "================================================\n"
 
 git push && podspec push
