@@ -2,7 +2,7 @@
 
 VersionString="grep -E 'spec.version.*=' KLLogin.podspec"
 VersionNumber=`tr -cd 0-9 <<<"$VersionString"`
-
+ 
 NewVersionNumber=$(($VersionNumber + 1))
 LineNumber=`grep -nE 'spec.version.*=' KLLogin.podspec | cut -d : -f1`
 sed -i "" "${LineNumber}s/${VersionNumber}/${NewVersionNumber}/g" KLLogin.podspec

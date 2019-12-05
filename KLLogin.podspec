@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
 
 spec.name         = "KLLogin"
-spec.version      = "1"
+spec.version ="1"
 spec.summary      = "登录"
 
 spec.description  = <<-DESC
