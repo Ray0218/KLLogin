@@ -1,5 +1,5 @@
 
-Pod::s.new do |s|
+Pod::Spec.new do |s|
 
 s.name         = "KLLogin"
 s.version ="1"
