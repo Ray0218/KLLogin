@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9ED8BB35F2B0527F6309AD17 /* Pods_KLLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FCCFA93D31C3A3851D0A29B /* Pods_KLLogin.framework */; };
 		F7E9BB6623989B8300995791 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7E9BB6523989B8300995791 /* AppDelegate.m */; };
 		F7E9BB6923989B8300995791 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7E9BB6823989B8300995791 /* SceneDelegate.m */; };
 		F7E9BB6C23989B8300995791 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7E9BB6B23989B8300995791 /* ViewController.m */; };
@@ -18,7 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F7E9BB6123989B8300995791 /* KLLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KLLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FCCFA93D31C3A3851D0A29B /* Pods_KLLogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KLLogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4465AB7782194659FE13DCA /* Pods-KLLogin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KLLogin.release.xcconfig"; path = "Target Support Files/Pods-KLLogin/Pods-KLLogin.release.xcconfig"; sourceTree = "<group>"; };
+		D22B8D1121EED041CAFB8262 /* Pods-KLLogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KLLogin.debug.xcconfig"; path = "Target Support Files/Pods-KLLogin/Pods-KLLogin.debug.xcconfig"; sourceTree = "<group>"; };
+		F7E9BB6123989B8300995791 /* KLLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = KLLogin.app; path = "/Users/zl/Desktop/ray/KLLogin/build/Debug-iphoneos/KLLogin.app"; sourceTree = "<absolute>"; };
 		F7E9BB6423989B8300995791 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F7E9BB6523989B8300995791 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F7E9BB6723989B8300995791 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
@@ -39,26 +43,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9ED8BB35F2B0527F6309AD17 /* Pods_KLLogin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		206BBC784997BC398D19335F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D22B8D1121EED041CAFB8262 /* Pods-KLLogin.debug.xcconfig */,
+				C4465AB7782194659FE13DCA /* Pods-KLLogin.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		93B74A1992EDC92A01E7B77A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7FCCFA93D31C3A3851D0A29B /* Pods_KLLogin.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F7E9BB5823989B8300995791 = {
 			isa = PBXGroup;
 			children = (
 				F7E9BB6323989B8300995791 /* KLLogin */,
-				F7E9BB6223989B8300995791 /* Products */,
+				206BBC784997BC398D19335F /* Pods */,
+				93B74A1992EDC92A01E7B77A /* Frameworks */,
 			);
-			sourceTree = "<group>";
-		};
-		F7E9BB6223989B8300995791 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F7E9BB6123989B8300995791 /* KLLogin.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		F7E9BB6323989B8300995791 /* KLLogin */ = {
@@ -96,9 +112,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F7E9BB7A23989B9700995791 /* Build configuration list for PBXNativeTarget "KLLogin" */;
 			buildPhases = (
+				04AEFB58B7687A038C4383C2 /* [CP] Check Pods Manifest.lock */,
 				F7E9BB5D23989B8300995791 /* Sources */,
 				F7E9BB5E23989B8300995791 /* Frameworks */,
 				F7E9BB5F23989B8300995791 /* Resources */,
+				5352A8548DA10E61A28CD5B9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,7 +150,7 @@
 				Base,
 			);
 			mainGroup = F7E9BB5823989B8300995791;
-			productRefGroup = F7E9BB6223989B8300995791 /* Products */;
+			productRefGroup = F7E9BB5823989B8300995791;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -153,6 +171,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04AEFB58B7687A038C4383C2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KLLogin-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5352A8548DA10E61A28CD5B9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KLLogin/Pods-KLLogin-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KLLogin/Pods-KLLogin-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KLLogin/Pods-KLLogin-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F7E9BB5D23989B8300995791 /* Sources */ = {
@@ -301,6 +361,7 @@
 		};
 		F7E9BB7B23989B9700995791 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D22B8D1121EED041CAFB8262 /* Pods-KLLogin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -319,6 +380,7 @@
 		};
 		F7E9BB7C23989B9700995791 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4465AB7782194659FE13DCA /* Pods-KLLogin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
