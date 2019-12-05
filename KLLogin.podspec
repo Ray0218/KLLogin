@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
 
 spec.name         = "KLLogin"
-spec.version      = "0.0.4"
+spec.version      = "1"
 spec.summary      = "登录"
 
 spec.description  = <<-DESC
@@ -24,6 +24,6 @@ spec.source_files  =   "KLLogin/Class/**/*.{h,m,swift}"
 # spec.public_header_files = "Classes/**/*.h"
 spec.requires_arc = true
 
-#spec.dependency  "Masonry"
+spec.dependency  'Masonry'
 
 end
