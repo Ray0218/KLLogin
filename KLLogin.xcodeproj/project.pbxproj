@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,13 +16,13 @@
 		F7E9BB7423989B9700995791 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7E9BB7223989B9700995791 /* LaunchScreen.storyboard */; };
 		F7E9BB7723989B9700995791 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7E9BB7623989B9700995791 /* main.m */; };
 		F7E9BB802398A16700995791 /* KLLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7E9BB7F2398A16700995791 /* KLLoginViewController.m */; };
+		F7E9BB87239A335500995791 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F7E9BB86239A335500995791 /* UserModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7FCCFA93D31C3A3851D0A29B /* Pods_KLLogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KLLogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4465AB7782194659FE13DCA /* Pods-KLLogin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KLLogin.release.xcconfig"; path = "Target Support Files/Pods-KLLogin/Pods-KLLogin.release.xcconfig"; sourceTree = "<group>"; };
 		D22B8D1121EED041CAFB8262 /* Pods-KLLogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KLLogin.debug.xcconfig"; path = "Target Support Files/Pods-KLLogin/Pods-KLLogin.debug.xcconfig"; sourceTree = "<group>"; };
-		F7E9BB6123989B8300995791 /* KLLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = KLLogin.app; path = "/Users/zl/Desktop/ray/KLLogin/build/Debug-iphoneos/KLLogin.app"; sourceTree = "<absolute>"; };
 		F7E9BB6423989B8300995791 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F7E9BB6523989B8300995791 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F7E9BB6723989B8300995791 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
@@ -36,6 +36,9 @@
 		F7E9BB7623989B9700995791 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F7E9BB7E2398A16700995791 /* KLLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLLoginViewController.h; sourceTree = "<group>"; };
 		F7E9BB7F2398A16700995791 /* KLLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLLoginViewController.m; sourceTree = "<group>"; };
+		F7E9BB84239A333200995791 /* KLLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KLLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7E9BB85239A335500995791 /* UserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		F7E9BB86239A335500995791 /* UserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +59,6 @@
 				D22B8D1121EED041CAFB8262 /* Pods-KLLogin.debug.xcconfig */,
 				C4465AB7782194659FE13DCA /* Pods-KLLogin.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -74,6 +76,7 @@
 				F7E9BB6323989B8300995791 /* KLLogin */,
 				206BBC784997BC398D19335F /* Pods */,
 				93B74A1992EDC92A01E7B77A /* Frameworks */,
+				F7E9BB84239A333200995791 /* KLLogin.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +104,8 @@
 			children = (
 				F7E9BB7E2398A16700995791 /* KLLoginViewController.h */,
 				F7E9BB7F2398A16700995791 /* KLLoginViewController.m */,
+				F7E9BB85239A335500995791 /* UserModel.h */,
+				F7E9BB86239A335500995791 /* UserModel.m */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -124,7 +129,7 @@
 			);
 			name = KLLogin;
 			productName = KLLogin;
-			productReference = F7E9BB6123989B8300995791 /* KLLogin.app */;
+			productReference = F7E9BB84239A333200995791 /* KLLogin.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -221,6 +226,7 @@
 			files = (
 				F7E9BB6C23989B8300995791 /* ViewController.m in Sources */,
 				F7E9BB6623989B8300995791 /* AppDelegate.m in Sources */,
+				F7E9BB87239A335500995791 /* UserModel.m in Sources */,
 				F7E9BB7723989B9700995791 /* main.m in Sources */,
 				F7E9BB6923989B8300995791 /* SceneDelegate.m in Sources */,
 				F7E9BB802398A16700995791 /* KLLoginViewController.m in Sources */,
