@@ -18,7 +18,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.title = @"test";
+    self.title = @"klLoginviewcontroller";
+    
+    
 }
 
 /*
